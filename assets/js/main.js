@@ -16,6 +16,7 @@
 
 	$(function() {
 
+		
 		var $window = $(window),
 			$body = $('body');
 
@@ -114,5 +115,20 @@
 			});
 
 	});
+	
+	// Menu.
+	$('#menu')
+		.append('<a href="#menu" class="close"></a>')
+		.appendTo($body)
+		.panel({
+			target: $body,
+			visibleClass: 'is-menu-visible',
+			delay: 500,
+			hideOnClick: true,
+			hideOnSwipe: true,
+			resetScroll: true,
+			resetForms: true,
+			side: 'right'
+		});
 
 })(jQuery);
